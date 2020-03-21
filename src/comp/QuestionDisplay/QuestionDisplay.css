@@ -1,0 +1,47 @@
+.questionContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 50px);
+  grid-template-areas:
+    "question question"
+    "answer answer"
+    "trueButton falseButton"
+    "nextButton nextButton";
+}
+
+.question {
+  grid-area: question;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trueButton {
+  grid-area: trueButton;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.falseButton {
+  grid-area: falseButton;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.answerContainer {
+  color: orangered;
+  font-size: 50px;
+  grid-area: answer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nextButton {
+  grid-area: nextButton;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

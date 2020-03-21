@@ -1,38 +1,39 @@
-.App {
-  text-align: center;
+.app {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr repeat(4, 70px);
+  grid-template-areas:
+    " head head head "
+    " cat cat cat "
+    "ques ques ques"
+    ". nextQuestion ."
+    ". scoreboard .";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mainHeader {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  grid-area: head;
 }
 
-.App-link {
-  color: #61dafb;
+.questionDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: ques;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nextQuestionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: nextQuestion;
+}
+
+.scoreBoard {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  grid-area: scoreboard;
 }
